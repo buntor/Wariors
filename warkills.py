@@ -14,9 +14,8 @@ if __name__ == "__main__":
     victim_name = ""
 
     while len(victim_name) == 0:
-        agressor = units.copy()
-        victim = agressor.pop(randrange(0, 2))
-        agressor = agressor[0]
+        victim = units[randrange(0, 2)]
+        agressor = units[int(not bool(units.index(victim)))]
 
         input(f"{agressor.name} ({agressor.health}) -> "
               f"{victim.name} ({victim.health})...")
